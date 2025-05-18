@@ -30,6 +30,7 @@ export default defineConfig({
           items: [
             { text: "Markdown 示例", link: "/src/examples/markdown-examples" },
             { text: "运行时API 示例", link: "/src/examples/api-examples" },
+            { text: "Markdown 语法", link: "/src/examples/markdown" },
           ],
         },
       ],
