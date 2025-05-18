@@ -15,7 +15,7 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "文档帮助", link: "/src/examples/markdown-examples" },
-      { text: ".Net", link: "/src/net/.NETStart" },
+      { text: ".Net", link: "/src/net/dotnetStart" },
       { text: "NodeJs", link: "/src/node/nodeChapter1" },
       { text: "web API", link: "/src/webAPI/webSerial" },
     ],
@@ -37,7 +37,7 @@ export default defineConfig({
         {
           text: ".Net",
           collapsed: false,
-          items: [{ text: ".Net入门", link: "/src/net/.NETStart" }],
+          items: [{ text: ".Net入门", link: "/src/net/dotnetStart" }],
         },
       ],
       "/src/node/": [
