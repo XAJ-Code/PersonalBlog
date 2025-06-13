@@ -18,6 +18,7 @@ export default defineConfig({
       { text: ".Net", link: "/src/net/dotnetStart" },
       { text: "NodeJs", link: "/src/node/nodeChapter1" },
       { text: "web API", link: "/src/webAPI/webSerial" },
+      { text: "kotlin", link: "/src/kotlin/basicDataType" },
     ],
     search: {
       provider: "local",
@@ -79,6 +80,13 @@ export default defineConfig({
           items: [{ text: "web Serial串口", link: "/src/webAPI/webSerial" }],
         },
       ],
+      "/src/kotlin/":[
+        {
+          text: "kotlin语言基础",
+          collapsed: false,
+          items: [{ text: "基本数据类型", link: "/src/kotlin/basicDataType" }],
+        }
+      ]
     },
     // sidebar: [
     //   {
