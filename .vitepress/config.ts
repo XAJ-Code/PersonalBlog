@@ -84,7 +84,10 @@ export default defineConfig({
         {
           text: "kotlin语言基础",
           collapsed: false,
-          items: [{ text: "基本数据类型", link: "/src/kotlin/basicDataType" }],
+          items: [
+            { text: "基本数据类型", link: "/src/kotlin/basicDataType" },
+            { text: "Android环境搭建", link: "/src/kotlin/AndroidStduio" }
+          ],
         }
       ]
     },
