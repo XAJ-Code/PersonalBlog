@@ -77,7 +77,10 @@ export default defineConfig({
         {
           text: "web API合集",
           collapsed: false,
-          items: [{ text: "web Serial串口", link: "/src/webAPI/webSerial" }],
+          items: [
+            { text: "web Serial串口", link: "/src/webAPI/webSerial" },
+            { text: "对等依赖", link: "/src/webAPI/peerDependencies" }
+          ],
         },
       ],
       "/src/kotlin/":[
