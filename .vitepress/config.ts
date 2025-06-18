@@ -17,7 +17,7 @@ export default defineConfig({
       { text: "文档帮助", link: "/src/examples/markdown-examples" },
       { text: ".Net", link: "/src/net/dotnetStart" },
       { text: "NodeJs", link: "/src/node/nodeChapter1" },
-      { text: "web API", link: "/src/webAPI/webSerial" },
+      { text: "前端", link: "/src/webAPI/webSerial" },
       { text: "kotlin", link: "/src/kotlin/basicDataType" },
     ],
     search: {
@@ -75,9 +75,10 @@ export default defineConfig({
       ],
       "/src/webAPI/": [
         {
-          text: "web API合集",
+          text: "前端知识",
           collapsed: false,
           items: [
+            { text: "tanStackQuery", link: "/src/webAPI/tanStackQuery" },
             { text: "web Serial串口", link: "/src/webAPI/webSerial" },
             { text: "对等依赖", link: "/src/webAPI/peerDependencies" }
           ],
