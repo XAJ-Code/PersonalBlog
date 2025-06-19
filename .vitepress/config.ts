@@ -93,7 +93,8 @@ export default defineConfig({
             { text: "数组(Array)", link: "/src/kotlin/Array" },
             { text: "Android环境搭建", link: "/src/kotlin/AndroidStduio" },
             { text: "JetPack Compose", link: "/src/kotlin/JetpackComponse" },
-            { text: "位运算", link: "/src/kotlin/bitOperation" }
+            { text: "位运算", link: "/src/kotlin/bitOperation" },
+            { text: "标识符", link: "/src/kotlin/breakAndReturn" }
           ],
         }
       ]
