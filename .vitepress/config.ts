@@ -94,7 +94,8 @@ export default defineConfig({
             { text: "Android环境搭建", link: "/src/kotlin/AndroidStduio" },
             { text: "JetPack Compose", link: "/src/kotlin/JetpackComponse" },
             { text: "位运算", link: "/src/kotlin/bitOperation" },
-            { text: "标识符", link: "/src/kotlin/breakAndReturn" }
+            { text: "标识符", link: "/src/kotlin/breakAndReturn" },
+            { text: "异常(Exception)", link: "/src/kotlin/Exception" }
           ],
         }
       ]
