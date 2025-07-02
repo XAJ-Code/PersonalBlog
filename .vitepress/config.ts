@@ -98,12 +98,19 @@ export default defineConfig({
           items: [
             { text: "基本数据类型", link: "/src/kotlin/basicDataType" },
             { text: "数组(Array)", link: "/src/kotlin/Array" },
-            { text: "Android环境搭建", link: "/src/kotlin/AndroidStduio" },
-            { text: "JetPack Compose", link: "/src/kotlin/JetpackComponse" },
             { text: "位运算", link: "/src/kotlin/bitOperation" },
             { text: "标识符", link: "/src/kotlin/breakAndReturn" },
             { text: "异常(Exception)", link: "/src/kotlin/Exception" },
-            { text: "类(class)", link: "/src/kotlin/class" }
+            { text: "类(class)", link: "/src/kotlin/class" },
+            { text: "lambda表达式", link: "/src/kotlin/lambda" }
+          ],
+        },
+        {
+          text: "Android开发",
+          collapsed: false,
+          items: [
+            { text: "Android环境搭建", link: "/src/kotlin/android/AndroidStduio" },
+            { text: "JetPack Compose", link: "/src/kotlin/android/JetpackComponse" },
           ],
         }
       ]

@@ -129,6 +129,7 @@ distributionUrl=https\://services.gradle.org/distributions/gradle-7.0-all.zip
 
 * **阿里云镜像:**
     * https://mirrors.aliyun.com/macports/distfiles/gradle/gradle-8.10.2-bin.zip
+    * [阿里的镜像仓库](https://developer.aliyun.com/mvn/guide)
 
 * **华为云镜像:**
     * https://repo.huaweicloud.com/gradle/gradle-8.0-bin.zip
