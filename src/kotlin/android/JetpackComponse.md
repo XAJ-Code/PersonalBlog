@@ -73,9 +73,9 @@ Row(
 ```
 布局图片如下：
 **Column盒子排列方式**
-![Column盒子排列方式](../../assets/gifs/Colum.gif)
+![Column盒子排列方式](../../../assets/gifs/Colum.gif)
 **Row盒子排列方式**
-![Row盒子排列方式](../../assets/gifs/Row.gif)
+![Row盒子排列方式](../../../assets/gifs/Row.gif)
 
 **大小约束**：
 ```kotlin

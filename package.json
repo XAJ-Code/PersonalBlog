@@ -15,10 +15,6 @@
     "vite",
     "vitePress"
   ],
-  "packageManager": "pnpm@9.15.0",
-  "engines": {
-    "node": ">=16.13.0"
-  },
   "author": "zwj",
   "license": "MIT",
   "devDependencies": {
