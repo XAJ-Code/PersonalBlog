@@ -213,3 +213,8 @@ const testDiv = ()=>{
 - [Vue 3 官方文档 - 渲染函数 & JSX](https://cn.vuejs.org/guide/extras/render-function.html)
 - [Vite + Vue 3 + TSX 配置指南](https://github.com/vuejs/babel-plugin-jsx)
 - [Element Plus - Vue 3 组件库](https://element-plus.org/)
+
+## 注意：
+ - 在vue中使用jsx语法需要安装`"@vitejs/plugin-vue-jsx": "^4.2.0",`这个插件，版本忽略,
+ - 在tsconfig.json中需要配置`"jsx": "preserve",`、`"jsxImportSource": "vue",`、`"allowImportingTsExtensions": true,`这个选项,
+ - 在vite.config.js中`import vueJsx from '@vitejs/plugin-vue-jsx';`plugins:[vueJsx()]就可以了
