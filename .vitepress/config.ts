@@ -83,6 +83,13 @@ export default defineConfig({
             { text: "对等依赖", link: "/src/webAPI/peerDependencies" }
           ],
         },
+        {
+          text: "vue",
+          collapsed: false,
+          items: [
+            { text: "vue的三种写法", link: "/src/webAPI/vue/jsxInVue" },
+          ],
+        },
       ],
       "/src/kotlin/":[
         {
