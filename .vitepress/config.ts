@@ -97,6 +97,7 @@ export default defineConfig({
           text: "kotlin语言基础",
           collapsed: false,
           items: [
+            { text: "基本概念", link: "/src/kotlin/basicConcepts" },
             { text: "基本数据类型", link: "/src/kotlin/basicDataType" },
             { text: "数组(Array)", link: "/src/kotlin/Array" },
             { text: "位运算", link: "/src/kotlin/bitOperation" },
