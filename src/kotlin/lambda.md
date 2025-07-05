@@ -106,4 +106,31 @@ Column {
   }
   ```
 
+## 七、Lambda 与 JavaScript 箭头函数对比
+
+| 特性 | Kotlin Lambda | JavaScript 箭头函数 | 说明 |
+|------|---------------|---------------------|------|
+| **语法** | `{ a, b -> a + b }` | `(a, b) => a + b` | Kotlin 用 `->`，JS 用 `=>` |
+| **无参数** | `{ println("Hi") }` | `() => console.log("Hi")` | Kotlin 可省略 `()` |
+| **单参数** | `{ println(it) }` | `x => console.log(x)` | Kotlin 用 `it`，JS 可省略 `()` |
+| **返回值** | 最后一行自动返回 | 单行隐式返回 | 多行 JS 需显式 `return` |
+| **this 绑定** | 指向外层类 | 继承父作用域 | JS 箭头函数无独立 `this` |
+| **类型系统** | 强类型 | 弱类型 | Kotlin 需要类型声明 |
+| **闭包支持** | ✅ | ✅ | 均可捕获外部变量 |
+
+## 八. 不同形式的 Lambda
+
+| 类型 | 示例 | 说明 |
+|------|------|------|
+| **无参数** | `{ println("Hello") }` | 省略 `->` |
+| **单参数** | `{ name: String -> println(name) }` | 显式声明类型 |
+| **单参数简写** | `{ println(it) }` | 使用 `it` 关键字 |
+| **多参数** | `{ x: Int, y: Int -> x + y }` | 逗号分隔参数 |
+| **带返回值** | `{ a: Int, b: Int -> a * b }` | 最后一行是返回值 |
+
 > **总结**：Kotlin Lambda 通过简洁的语法实现了强大的函数式编程能力，是现代化 Kotlin 开发的核心特性。掌握它，能让你在集合操作、异步回调、Compose UI 构建等场景中写出更优雅的代码。
+
+**进一步学习资源**：
+- [Kotlin 官方文档 - Lambda](https://kotlinlang.org/docs/lambdas.html)
+- [Kotlin Koans - Lambda 练习](https://play.kotlinlang.org/koans)
+- [Effective Kotlin - Lambda 最佳实践](https://kt.academy/book/effectivekotlin)
