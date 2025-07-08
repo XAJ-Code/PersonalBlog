@@ -113,6 +113,8 @@ export default defineConfig({
           items: [
             { text: "Android环境搭建", link: "/src/kotlin/android/AndroidStduio" },
             { text: "JetPack Compose", link: "/src/kotlin/android/JetpackComponse" },
+            { text: "单位基础(dp)", link: "/src/kotlin/android/unit" },
+            { text: "布卷组合函数", link: "/src/kotlin/android/layoutFuncion" },
           ],
         }
       ]
