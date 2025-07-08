@@ -114,7 +114,8 @@ export default defineConfig({
             { text: "Android环境搭建", link: "/src/kotlin/android/AndroidStduio" },
             { text: "JetPack Compose", link: "/src/kotlin/android/JetpackComponse" },
             { text: "单位基础(dp)", link: "/src/kotlin/android/unit" },
-            { text: "布卷组合函数", link: "/src/kotlin/android/layoutFuncion" },
+            { text: "布局组合函数", link: "/src/kotlin/android/layoutFuncion" },
+            { text: "mutableStateOf(状态)", link: "/src/kotlin/android/remember" },
           ],
         }
       ]
