@@ -104,7 +104,8 @@ export default defineConfig({
             { text: "标识符", link: "/src/kotlin/breakAndReturn" },
             { text: "异常(Exception)", link: "/src/kotlin/Exception" },
             { text: "类(class)", link: "/src/kotlin/class" },
-            { text: "lambda表达式", link: "/src/kotlin/lambda" }
+            { text: "lambda表达式", link: "/src/kotlin/lambda" },
+            { text: "接口(Interface)", link: "/src/kotlin/interface" },
           ],
         },
         {
