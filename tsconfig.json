@@ -15,6 +15,7 @@
   "include": [
     "./src/**/*.ts",
     "./.vitePress/**/*.ts",
+    "shims-vue.d.ts",
   ],
   "exclude": [
     "./**/node_modules/**",

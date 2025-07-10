@@ -91,6 +91,13 @@ export default defineConfig({
             { text: "vue的三种写法", link: "/src/webAPI/vue/jsxInVue" },
           ],
         },
+        {
+          text: "nuxt",
+          collapsed: false,
+          items: [
+            { text: "nuxt基本概念", link: "/src/webAPI/nuxt/basicNuxt" },
+          ],
+        },
       ],
       "/src/kotlin/":[
         {
