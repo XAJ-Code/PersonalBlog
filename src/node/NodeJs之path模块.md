@@ -1,9 +1,11 @@
-# Node.js 路径处理艺术：全面掌握 path 模块
-
-![](https://nodejs.org/static/images/logo.svg)
+# Node.js 路径：全面掌握 path 模块
+<img 
+  src="https://nodejs.org/static/images/logo.svg" 
+  alt="Node.js Logo" 
+  style="background-color: black;padding: 10px;"
+/>
 
 ## 一、核心 API 解析
-
 ### 1. 路径基础方法
 | API                | 作用                          | 示例（POSIX）               | 示例（Windows）           |
 |--------------------|-----------------------------|---------------------------|-------------------------|
