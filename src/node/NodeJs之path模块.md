@@ -1,7 +1,6 @@
-```markdown
 # Node.js 路径处理艺术：全面掌握 path 模块
 
-!https://nodejs.org/static/images/logo.svg
+![](https://nodejs.org/static/images/logo.svg)
 
 ## 一、核心 API 解析
 

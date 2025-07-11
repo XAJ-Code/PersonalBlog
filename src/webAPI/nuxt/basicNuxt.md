@@ -172,5 +172,10 @@ onMounted(() => {
 - 🧩 大型团队需要标准化工程架构
 
 ## 生命周期示例图
-<ImageViewer src="../../../assets/images/nuxtLifeCircle.png" />
-<ImageViewer src="../../../assets/images/nuxtLifeCircle2.png" />
+<ImageViewer :src="imagePath" />
+<ImageViewer :src="imagePath2" />
+
+<script setup>
+import imagePath from '@assets/images/nuxtLifeCircle.png'
+import imagePath2 from '@assets/images/nuxtLifeCircle2.png'
+</script>

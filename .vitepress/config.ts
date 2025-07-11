@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import path from "node:path";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,6 +8,13 @@ export default defineConfig({
   description: "代码知识点归纳",
   base: "/PersonalBlog/",
   head: [["link", { rel: "icon", href: "/PersonalBlog/favicon.ico" }]],
+  vite:{
+    resolve: {
+      alias:{
+        '@assets': path.resolve(__dirname, '../assets')
+      }
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/logo.svg",
