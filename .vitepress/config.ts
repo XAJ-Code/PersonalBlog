@@ -125,6 +125,9 @@ export default defineConfig({
             { text: "类(class)", link: "/src/kotlin/class" },
             { text: "lambda表达式", link: "/src/kotlin/lambda" },
             { text: "接口(Interface)", link: "/src/kotlin/interface" },
+            { text: "扩展和伴生对象", link: "/src/kotlin/extend" },
+            { text: "数据类", link: "/src/kotlin/dataClass" },
+            { text: "密封类", link: "/src/kotlin/sealedClass" },
           ],
         },
         {
