@@ -70,6 +70,10 @@ export default defineConfig({
               text: "nodejs第八章动静分离",
               link: "/src/node/NodeJS实现动静分离",
             },
+            {
+              text: "nodejs第九章path变量",
+              link: "/src/node/NodeJs之path模块",
+            },
           ],
         },
       ],
