@@ -41,9 +41,10 @@ customElements.define('my-component', MyComponent);
 ---
 
 ### 2. Shadow DOM
-​- ​DOM 隔离​​：外部无法直接访问 shadow DOM 内的元素
-​- ​样式封装​​：shadow DOM 内的样式不会影响外部
-​​- 组成（Composition）​​：通过 <slot> 实现内容分发
+- DOM隔离​​：外部无法直接访问 shadow DOM 内的元素
+- ​样式封装​​：shadow DOM 内的样式不会影响外部
+- 组成（Composition）​​:通过slot实现内容分发
+
 ```javascript
 const shadowRoot = this.attachShadow({ mode: 'open' });
 shadowRoot.innerHTML = `<style>:host { display: block; }</style>`;
