@@ -93,7 +93,8 @@ export default defineConfig({
             { text: "tanStackQuery", link: "/src/webAPI/tanStackQuery" },
             { text: "web Serial串口", link: "/src/webAPI/webSerial" },
             { text: "对等依赖", link: "/src/webAPI/peerDependencies" },
-            { text: "Html实体字符", link: "/src/webAPI/htmlUnicode" }
+            { text: "Html实体字符", link: "/src/webAPI/htmlUnicode" },
+            { text: "webComponent", link: "/src/webAPI/webComponent" },
           ],
         },
         {
