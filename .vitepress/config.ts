@@ -140,6 +140,7 @@ export default defineConfig({
             { text: "单位基础(dp)", link: "/src/kotlin/android/unit" },
             { text: "布局组合函数", link: "/src/kotlin/android/layoutFuncion" },
             { text: "mutableStateOf(状态)", link: "/src/kotlin/android/remember" },
+            { text: "modifier修饰符", link: "/src/kotlin/android/modifier" },
           ],
         }
       ]

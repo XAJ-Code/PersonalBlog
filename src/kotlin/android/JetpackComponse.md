@@ -1,7 +1,9 @@
 # Android Jetpack Compose 中的修饰符：装饰与行为增强
 - Jetpack Compose 是用于构建原生 Android 界面的新款工具包
+- Compose 是一个声明性界面框架,这意味着您可以在代码中声明界面的外观和行为，而无需编写大量的代码。
 - 官网连接：https://developer.android.com/develop/ui/compose/documentation?hl=zh-cn
 - 在 Jetpack Compose 中，修饰符(Modifier)是构建 UI 的核心概念之一。它们允许开发者以声明式方式为界面元素添加视觉装饰或行为功能，而不需要创建新的组件。本文将深入探讨修饰符的使用，特别是如何结合 Column 和 Row 这两个常用的盒子布局来应用修饰符。
+- Compose 应用调用**可组合函数**，以将数据转换为界面。如果发生状态更改，Compose 会使用新状态**重新执行受影响的可组合函数**，从而创建更新后的界面。这一过程称为“重组”
 
 ## 修饰符基础
 

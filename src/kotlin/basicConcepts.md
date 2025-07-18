@@ -22,6 +22,13 @@ fun main() {
     // name = "Java"       // 编译错误，val 不可变
     println("Count: $count, Name: $name")
 }
+
+// ?:Elvis 运算符,相当于if else，相当于三元运算符，js中的 ??
+fun main() {
+   val b: String? = null
+   val l = b?.length ?: 0
+    println(l)
+}
 ```
 
 ✅ **普通变量的特点**：
