@@ -62,7 +62,9 @@ db.serialize(() => {
   db.run(`CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    age INTEGER
+    age INTEGER,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
   )`);
 
   // 插入数据（使用参数化查询防止SQL注入）
@@ -90,6 +92,28 @@ db.close((err) => {
   }
 });
 ```
+### 参数化查询
+-- 默认当前日期时间，UTC 时间（默认）
+created_at DATETIME DEFAULT **CURRENT_TIMESTAMP**
+
+-- 默认当前日期（只有日期部分）  
+created_date DATE **DEFAULT CURRENT_DATE**
+
+-- 默认当前时间（只有时间部分）
+created_time TIME **DEFAULT CURRENT_TIME**
+
+-- 使用 UNIX 时间戳（整数形式）
+created_at INTEGER **DEFAULT (strftime('%s', 'now'))**
+
+-- 本地时间（自动识别系统时区）
+created_at DATETIME DEFAULT **(strftime('%Y-%m-%d %H:%M:%S', 'now', 'localtime'))**
+
+-- 特定时区（如北京时间 UTC+8）
+created_at DATETIME DEFAULT **(strftime('%Y-%m-%d %H:%M:%S', 'now', '+8 hours'))**
+
+-- 4. 纽约时间（UTC-5）
+created_at DATETIME DEFAULT (strftime('%Y-%m-%d %H:%M:%S', 'now', '-5 hours'))
+
 
 ### 关键 API 说明
 - `db.run()`: 执行不返回数据的 SQL 语句（如 `CREATE`, `INSERT`, `UPDATE`, `DELETE`）。
