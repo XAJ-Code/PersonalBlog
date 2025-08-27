@@ -82,6 +82,10 @@ export default defineConfig({
               text: "nodejs第九章path变量",
               link: "/src/node/NodeJs之path模块",
             },
+            {
+              text: "nodejs第十章sqlite模块",
+              link: "/src/node/NodeJs中的sqlite知识",
+            }
           ],
         },
       ],
