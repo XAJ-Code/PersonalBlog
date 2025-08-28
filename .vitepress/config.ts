@@ -109,6 +109,13 @@ export default defineConfig({
           ],
         },
         {
+          text: "react",
+          collapsed: false,
+          items: [
+            { text: "react完整知识点", link: "/src/webAPI/react/summaryReact" },
+          ],
+        },
+        {
           text: "nuxt",
           collapsed: false,
           items: [
