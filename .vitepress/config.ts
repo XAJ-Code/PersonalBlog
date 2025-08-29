@@ -47,7 +47,10 @@ export default defineConfig({
         {
           text: ".Net",
           collapsed: false,
-          items: [{ text: ".Net入门", link: "/src/net/dotnetStart" }],
+          items: [
+            { text: ".Net入门", link: "/src/net/dotnetStart" },
+            { text: ".Net中的异步", link: "/src/net/async" }
+          ],
         },
       ],
       "/src/node/": [
