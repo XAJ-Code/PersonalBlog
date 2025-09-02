@@ -52,6 +52,7 @@ export default defineConfig({
             { text: "ASP.NET CORE", link: "/src/net/asp.netCore" },
             { text: ".Net中的异步", link: "/src/net/async" },
             { text: "依赖注入", link: "/src/net/DI" },
+            { text: "webAPI", link: "/src/net/Task" },
           ],
         },
       ],
