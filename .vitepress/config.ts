@@ -49,7 +49,9 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: ".Net入门", link: "/src/net/dotnetStart" },
-            { text: ".Net中的异步", link: "/src/net/async" }
+            { text: "ASP.NET CORE", link: "/src/net/asp.netCore" },
+            { text: ".Net中的异步", link: "/src/net/async" },
+            { text: "依赖注入", link: "/src/net/DI" },
           ],
         },
       ],
