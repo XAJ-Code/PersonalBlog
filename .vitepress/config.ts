@@ -105,6 +105,7 @@ export default defineConfig({
             { text: "对等依赖", link: "/src/webAPI/peerDependencies" },
             { text: "Html实体字符", link: "/src/webAPI/htmlUnicode" },
             { text: "webComponent", link: "/src/webAPI/webComponent" },
+            { text: "postMessage", link: "/src/webAPI/postMessage" },
           ],
         },
         {
