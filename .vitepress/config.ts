@@ -169,6 +169,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: "基本概念", link: "/src/camera/basicData" },
+            { text: "ISP(图像信号处理器)", link: "/src/camera/ISP" },
           ],
         },
       ]
