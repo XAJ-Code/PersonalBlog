@@ -27,6 +27,7 @@ export default defineConfig({
       { text: "NodeJs", link: "/src/node/nodeChapter1" },
       { text: "前端", link: "/src/webAPI/webSerial" },
       { text: "kotlin", link: "/src/kotlin/basicDataType" },
+      { text: "相机", link: "/src/camera/basicData" },
     ],
     search: {
       provider: "local",
@@ -161,6 +162,15 @@ export default defineConfig({
             { text: "modifier修饰符", link: "/src/kotlin/android/modifier" },
           ],
         }
+      ],
+      "/src/camera/":[
+        {
+          text: "相机基础知识",
+          collapsed: false,
+          items: [
+            { text: "基本概念", link: "/src/camera/basicData" },
+          ],
+        },
       ]
     },
     // sidebar: [
