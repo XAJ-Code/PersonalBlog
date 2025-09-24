@@ -56,6 +56,14 @@ export default defineConfig({
             { text: "webAPI", link: "/src/net/Task" },
           ],
         },
+        {
+          text: ".Net MAUI相关",
+          collapsed: false,
+          items: [
+            { text: "XAML的基本语法", link: "/src/net/maui/xaml" },
+            { text: "mvvm架构", link: "/src/net/maui/mvvm" },
+          ],
+        },
       ],
       "/src/node/": [
         {
