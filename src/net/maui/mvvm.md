@@ -356,6 +356,7 @@ public partial class NotesViewModel
 ```
 
 ### 2. 流行框架
-- **Prism**：企业级 MVVM 框架
+-  **.NET 社区MVVM工具包**：.NET 社区 MVVM 框架[NET 社区MVVM工具包](https://learn.microsoft.com/zh-cn/dotnet/communitytoolkit/mvvm/)
+- **Prism**：企业级 MVVM 框架[Prism](https://prismlibrary.com/)
 - **ReactiveUI**：响应式 MVVM 框架
 - **MvvmCross**：跨平台 MVVM 框架
