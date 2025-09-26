@@ -62,6 +62,7 @@ export default defineConfig({
           items: [
             { text: "XAML的基本语法", link: "/src/net/maui/xaml" },
             { text: "mvvm架构", link: "/src/net/maui/mvvm" },
+            { text: "线程", link: "/src/net/maui/task" },
           ],
         },
       ],
