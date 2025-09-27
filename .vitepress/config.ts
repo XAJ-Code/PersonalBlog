@@ -54,6 +54,7 @@ export default defineConfig({
             { text: ".Net中的异步", link: "/src/net/async" },
             { text: "依赖注入", link: "/src/net/DI" },
             { text: "webAPI", link: "/src/net/Task" },
+            { text: "文件操作", link: "/src/net/file" }
           ],
         },
         {
