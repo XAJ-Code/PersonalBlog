@@ -428,6 +428,19 @@ public class StringStudy
         string b = "AAA";
         Console.WriteLine(a.Equals(b,StringComparison.OrdinalIgnoreCase));
     }
+
+    public void YzmTest()
+    {
+        string yzmSource = "abcdefgABCDEFGHI1234567890";
+        StringBuilder sb = new StringBuilder();
+        //取四位验证码
+        for (int i = 0; i < 4; i++)
+        {
+            int Rdindex = Random.Shared.Next(yzmSource.Length);
+            sb.Append(yzmSource.Substring(Rdindex, 1));
+        }
+        Console.WriteLine(sb.ToString());
+    }
 }
 ```
 :::
