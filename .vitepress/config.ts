@@ -57,7 +57,8 @@ export default defineConfig({
             { text: "文件操作", link: "/src/net/file" },
             { text: "委托", link: "/src/net/delegate" },
             { text: "原子性", link: "/src/net/interlock" },
-            { text: "字符串相关操作", link: "/src/net/string" }
+            { text: "字符串相关操作", link: "/src/net/string" },
+            { text: "方法重写与隐藏", link: "/src/net/override" }
           ],
         },
         {
