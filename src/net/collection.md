@@ -251,7 +251,7 @@ catch (InvalidCastException ex)
 **数据结构**：哈希表
 **特点**：键值对，任意类型
 
-![image-20231028165624118](../../assets/images/Hashtable.png)
+![image-20231028165624118](../../assets/images/HashTable.png)
 
 ```csharp
 Hashtable table = new Hashtable();
