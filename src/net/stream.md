@@ -4,7 +4,7 @@
 
 I/O 流（Input/Output Stream）是 C# 中用于处理数据输入和输出的抽象概念。它提供了一种统一的方式来读取和写入不同类型的数据源，如文件、内存、网络连接等。
 
-- * ![image-20231028165624118](../../assets/images/stream.png)
+![image-20231028165624118](../../assets/images/stream.png)
 
 ## 核心流类
 
