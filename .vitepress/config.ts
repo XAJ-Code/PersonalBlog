@@ -61,6 +61,7 @@ export default defineConfig({
             { text: "方法重写与隐藏", link: "/src/net/override" },
             { text: "继承的多态性", link: "/src/net/polymorphism" },
             { text: "集合", link: "/src/net/collection" },
+            { text: "I/0流", link: "/src/net/stream" },
           ],
         },
         {

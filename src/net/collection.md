@@ -116,6 +116,7 @@ except.ExceptWith(set2); // 差集: {1,2}
 ### 4. Queue &lt;T&gt; - 队列
 **数据结构**：先进先出队列
 **特点**：FIFO处理
+- * ![image-20231028165624118](../../assets/images/queue.png)
 
 ```csharp
 Queue<string> queue = new Queue<string>();
@@ -141,6 +142,8 @@ foreach (string item in queue)
 ### 5. Stack &lt;T&gt; - 栈
 **数据结构**：后进先出栈
 **特点**：LIFO处理
+
+- * ![image-20231028165624118](../../assets/images/Stack.png)
 
 ```csharp
 Stack<string> stack = new Stack<string>();
@@ -247,6 +250,8 @@ catch (InvalidCastException ex)
 ### 2. Hashtable - 哈希表
 **数据结构**：哈希表
 **特点**：键值对，任意类型
+
+- * ![image-20231028165624118](../../assets/images/Hashtable.png)
 
 ```csharp
 Hashtable table = new Hashtable();
