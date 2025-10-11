@@ -1,11 +1,12 @@
 # C# 集合完全指南：泛型与非泛型集合
 
-## 集合概述
+## 一、集合概述
 
-### 什么是集合？
+### 1.什么是集合？
+
 集合是用于存储、组织和管理一组相关数据项的数据结构。与数组相比，集合提供了更灵活的数据操作方式。
 
-### 主要分类
+### 1.1主要分类
 | 分类 | 特点 | 命名空间 | 版本 |
 |------|------|----------|------|
 | **泛型集合** | 类型安全，性能好 | `System.Collections.Generic` | .NET 2.0+ |
@@ -13,11 +14,12 @@
 | **并发集合** | 线程安全 | `System.Collections.Concurrent` | .NET 4.0+ |
 | **专用集合** | 特殊用途 | `System.Collections.Specialized` | .NET 1.0+ |
 
-## 泛型集合
+## 二、泛型集合
 
 泛型集合提供类型安全，在编译时进行类型检查，避免装箱拆箱操作。
 
-### 1. List<T> - 动态数组
+### 1. List &lt;T&gt; - 动态数组
+
 **数据结构**：动态数组
 **特点**：按索引访问，自动扩容
 
@@ -87,7 +89,7 @@ foreach (string name in ages.Keys) { }
 foreach (int age in ages.Values) { }
 ```
 
-### 3. HashSet<T> - 哈希集合
+### 3. HashSet &lt;T&gt; - 哈希集合
 **数据结构**：哈希表
 **特点**：不重复元素，集合运算
 
@@ -111,7 +113,7 @@ HashSet<int> except = new HashSet<int>(set1);
 except.ExceptWith(set2); // 差集: {1,2}
 ```
 
-### 4. Queue<T> - 队列
+### 4. Queue &lt;T&gt; - 队列
 **数据结构**：先进先出队列
 **特点**：FIFO处理
 
@@ -136,7 +138,7 @@ foreach (string item in queue)
 }
 ```
 
-### 5. Stack<T> - 栈
+### 5. Stack &lt;T&gt; - 栈
 **数据结构**：后进先出栈
 **特点**：LIFO处理
 
@@ -156,7 +158,7 @@ string next = stack.Pop(); // "Second"
 string peek = stack.Peek(); // "First"
 ```
 
-### 6. LinkedList<T> - 双向链表
+### 6. LinkedList &lt;T&gt; - 双向链表
 **数据结构**：双向链表
 **特点**：快速插入删除
 
@@ -179,7 +181,7 @@ list.Remove(middle);
 list.AddBefore(last, "New Middle");
 ```
 
-### 7. SortedSet<T> - 排序集合
+### 7. SortedSet &lt;T&gt; - 排序集合
 **数据结构**：红黑树
 **特点**：自动排序，不重复
 
@@ -333,7 +335,7 @@ if (concurrentDict.TryGetValue("key1", out int value))
 }
 ```
 
-### 2. ConcurrentQueue<T>
+### 2. ConcurrentQueue &lt;T&gt;
 ```csharp
 ConcurrentQueue<string> concurrentQueue = new ConcurrentQueue<string>();
 
@@ -345,7 +347,7 @@ if (concurrentQueue.TryDequeue(out string item))
 }
 ```
 
-### 3. ConcurrentStack<T>
+### 3. ConcurrentStack &lt;T&gt;
 ```csharp
 ConcurrentStack<string> concurrentStack = new ConcurrentStack<string>();
 
@@ -356,7 +358,7 @@ if (concurrentStack.TryPop(out string item))
 }
 ```
 
-### 4. ConcurrentBag<T>
+### 4. ConcurrentBag &lt;T&gt;
 ```csharp
 ConcurrentBag<string> concurrentBag = new ConcurrentBag<string>();
 
@@ -373,12 +375,12 @@ if (concurrentBag.TryTake(out string item))
 
 | 集合类型 | 添加 | 访问 | 查找 | 删除 | 内存使用 |
 |----------|------|------|------|------|----------|
-| **List<T>** | O(1) 平摊 | O(1) | O(n) | O(n) | 中等 |
+| **List &lt;T&gt;** | O(1) 平摊 | O(1) | O(n) | O(n) | 中等 |
 | **Dictionary<T,K>** | O(1) | O(1) | O(1) | O(1) | 较高 |
-| **HashSet<T>** | O(1) | N/A | O(1) | O(1) | 较高 |
-| **Queue<T>** | O(1) | O(1) | N/A | O(1) | 较低 |
-| **Stack<T>** | O(1) | O(1) | N/A | O(1) | 较低 |
-| **LinkedList<T>** | O(1) | O(n) | O(n) | O(1) | 较高 |
+| **HashSet &lt;T&gt;** | O(1) | N/A | O(1) | O(1) | 较高 |
+| **Queue &lt;T&gt;** | O(1) | O(1) | N/A | O(1) | 较低 |
+| **Stack &lt;T&gt;** | O(1) | O(1) | N/A | O(1) | 较低 |
+| **LinkedList &lt;T&gt;** | O(1) | O(n) | O(n) | O(1) | 较高 |
 | **ArrayList** | O(1) 平摊 | O(1) | O(n) | O(n) | 中等（有装箱） |
 
 ### 内存占用比较
@@ -393,25 +395,25 @@ ArrayList nonGenericList = new ArrayList { 1, 2, 3 }; // 存储装箱的object
 ### 1. 选择合适的集合类型
 
 ```csharp
-// 需要索引访问和频繁遍历 → List<T>
+// 需要索引访问和频繁遍历 → List &lt;T&gt;
 List<Product> products = new List<Product>();
 
 // 需要快速键值查找 → Dictionary<TKey, TValue>
 Dictionary<int, Customer> customers = new Dictionary<int, Customer>();
 
-// 需要唯一性保证 → HashSet<T>
+// 需要唯一性保证 → HashSet &lt;T&gt;
 HashSet<string> uniqueEmails = new HashSet<string>();
 
-// 需要FIFO处理 → Queue<T>
+// 需要FIFO处理 → Queue &lt;T&gt;
 Queue<Order> orderQueue = new Queue<Order>();
 
-// 需要LIFO处理 → Stack<T>
+// 需要LIFO处理 → Stack &lt;T&gt;
 Stack<Command> undoStack = new Stack<Command>();
 
-// 需要频繁插入删除 → LinkedList<T>
+// 需要频繁插入删除 → LinkedList &lt;T&gt;
 LinkedList<LogEntry> logEntries = new LinkedList<LogEntry>();
 
-// 需要自动排序 → SortedSet<T> 或 SortedDictionary<TKey, TValue>
+// 需要自动排序 → SortedSet &lt;T&gt; 或 SortedDictionary<TKey, TValue>
 SortedSet<DateTime> appointmentTimes = new SortedSet<DateTime>();
 ```
 
@@ -476,13 +478,13 @@ Dictionary<string, int> goodDict = new Dictionary<string, int>();
 
 | 需求 | 推荐集合 | 原因 |
 |------|----------|------|
-| 通用列表存储 | `List<T>` | 类型安全，性能好 |
+| 通用列表存储 | `List &lt;T&gt;` | 类型安全，性能好 |
 | 键值对查找 | `Dictionary<TKey,TValue>` | 快速查找，类型安全 |
-| 唯一元素集合 | `HashSet<T>` | 自动去重，集合运算 |
-| 先进先出处理 | `Queue<T>` | FIFO语义，性能好 |
-| 后进先出处理 | `Stack<T>` | LIFO语义，性能好 |
-| 频繁插入删除 | `LinkedList<T>` | O(1)插入删除 |
-| 排序需求 | `SortedSet<T>`/`SortedDictionary<T,K>` | 自动排序 |
+| 唯一元素集合 | `HashSet &lt;T&gt;` | 自动去重，集合运算 |
+| 先进先出处理 | `Queue &lt;T&gt;` | FIFO语义，性能好 |
+| 后进先出处理 | `Stack &lt;T&gt;` | LIFO语义，性能好 |
+| 频繁插入删除 | `LinkedList &lt;T&gt;` | O(1)插入删除 |
+| 排序需求 | `SortedSet &lt;T&gt;`/`SortedDictionary<T,K>` | 自动排序 |
 | 多线程环境 | `ConcurrentDictionary<T,K>`等 | 线程安全 |
 | 遗留代码维护 | `ArrayList`/`Hashtable` | 兼容性 |
 
