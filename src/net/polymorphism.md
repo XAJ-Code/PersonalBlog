@@ -311,6 +311,7 @@ public class FileLogger : Logger
 2. **`new` 用于隐藏**：当需要提供完全不同实现且不影响现有代码时使用
 3. **绑定机制不同**：`override` 是运行时绑定，`new` 是编译时绑定
 4. **设计意图明确**：根据实际需求选择合适的关键字
+5. **使用向下转型之前**，必须发生过向上的转型，也就是Animal animal = new Dog();,dog 必须是animal的子类
 
 ### 选择指南
 
