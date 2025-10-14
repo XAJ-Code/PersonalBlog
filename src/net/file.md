@@ -5,7 +5,7 @@ var filePath = Path.combine(Directory.GetCurrentDirectory(),"test.txt");
 string fileName = Assembly.GetExecutingAssembly().Location;//获取当前程序集的路径,相当于nodejs中的 __filename
 string fileDirectory = Path.GetDirectoryName(fileName)??string.Empty;//获取当前程序集的目录,相当于nodejs中的 __dirname
 Console.writeLine($"当前的工作路径是filePath};编译后执行的d11路径是{fileName};
-dll的Console.writeLine($"当前的工作路径是录是{fileDirectory}");
+Console.writeLine($"当前的工作路径是录是{fileDirectory}");
 ```
 
 ## 目录

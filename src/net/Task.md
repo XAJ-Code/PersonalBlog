@@ -4,16 +4,6 @@
 
 在现代 ASP.NET Core Web API 开发中，正确处理返回值、异步操作和 HTTP 响应控制是构建健壮后端服务的关键。本文基于实际开发场景，总结三个核心问题的解决方案和最佳实践。
 
-- 文件夹操作：
-```csharp
-var filePath = Path.Combine(Directory.GetCurrentDirectory(), "test.txt");
-string fileName = Assembly.GetExecutingAssembly().Location;//获取当前程序集的路径,相当于nodejs中的__filename
-string fileDirectory = Path.GetDirectoryName(fileName) ?? string.Empty;//获取当前程序集的目录,相当于nodejs中的__dirname
-Console.WriteLine($"当前的工作路径是{filePath}; 编译后执行的dll路径是{fileName}；dll的目录是{fileDirectory}");
-```
-
----
-
 ## 1. Task 返回值：异步编程的核心
 
 ### 什么是 Task？

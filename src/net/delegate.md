@@ -1,8 +1,80 @@
-# C# 委托(Delegate)详解
+# C# 委托(Delegate)和事件详解
 
 ## 什么是委托？
 
 委托是C#中的一种**类型安全的函数指针**，它允许你将方法作为参数传递，或者将方法存储在变量中。简单来说，**委托就是方法的"容器"，它封装了方法的调用，使得方法可以像对象一样被传递和调用**。
+- 委托是一种数据类型，它可以指向一个方法，用于存储对方法的引用。
+- 主要使用在事件处理、多播、回调等场景。就是作为参数传递给方法的函数，可以是静态方法，也可以是实例方法。难点就是方法的封装。
+- 内置委托:action-面对无返回值的类型；func-有返回值的类型; predicate-一个参数返回布尔类型
+
+## 什么是事件
+事件(Event)是 C# 中一种特殊的委托类型，它实现了观察者设计模式，允许对象在特定动作发生时通知其他对象。对象之间的消息通讯
+- EventHandler就是事件，官方提供的，其实就是一个委托，但是它是泛型的，泛型参数就是事件的参数类型
+- 这个事件委托就是有两个参数，无返回值的委托，第一个参数是事件源(谁触发一般是this)，第二个参数是事件参数(这个参数是自定义的,继承EventArgs)
+- 事件的使用场景：
+    - 当一个对象需要通知其他对象时，可以使用事件。
+    - 当一个对象需要接收其他对象的通知时，可以使用事件。
+- event关键字用于声明事件，基于委托实现，相对于事件是委托的实例对象。只能在声明类中调用事件，其他对象绑定(订阅)
+
+- 事件的使用场景：
+    - 当一个对象需要通知其他对象时，可以使用事件。
+
+### 事件的基本使用
+```csharp
+
+//触发事件(委托)传递的参数
+public class MailEventArgs: EventArgs
+{
+    public string Content { get; set; } = string.Empty;
+    
+    public DateTime SendTime { get; set; }
+}
+
+
+public class Boss
+{
+    //public delegate void SendDelegate();//委托
+
+    // public Action? Send;//内置委托
+    public event EventHandler<MailEventArgs>? OnSendHandler;
+    public string BossName { get; init; } = string.Empty;
+
+    public void SendMail()
+    {
+        Console.WriteLine($"{BossName}开始发送邮件!");
+        MailEventArgs mailEventArgs = new MailEventArgs()
+        {
+            Content = "10点开会",
+            SendTime = DateTime.Now
+        };
+        if (OnSendHandler != null)
+        {
+            //调用事件
+            OnSendHandler(this, mailEventArgs);
+        }
+    }
+}
+
+public class Bull
+{
+    public string BullName { get; set; }
+
+    public void ReceiveMail(object? sender, MailEventArgs eventArgs)
+    {
+        Console.WriteLine($"{BullName}收到！-内容：{eventArgs.Content},时间:{eventArgs.SendTime}");
+    }
+}
+
+Boss boss = new Boss()
+{
+    BossName = "张三大老板"
+};
+
+var bull1 = new Bull() { BullName = "张一" };
+//多播委托
+boss.OnSendHandler += bull1.ReceiveMail;//订阅事件
+
+```
 
 ## 委托的基本语法
 
@@ -39,6 +111,43 @@ class Program
         operation = Calculator.Subtract;
         result = operation(10, 5);     // 结果为5
         Console.WriteLine($"10 - 5 = {result}");
+    }
+}
+```
+
+```csharp
+//练习小测试
+public class TestDelegate
+{
+    private delegate int MyDelegate(int a, int b); //委托，表示指向一个方法
+
+    private static int MyFunction(int a, int b)
+    {
+        return a + b;
+    }
+
+    public TestDelegate()
+    {
+        MyDelegate myDelegate = MyFunction;
+        //匿名方法
+        MyDelegate myDelegate2 = delegate(int a, int b) { return a + b; };
+        //lambda表达式--匿名方法的语法糖，不用定义类型，会自动适配委托定义的类型
+        MyDelegate myDelegate3 = (a, b) => a + b;
+        myDelegate.Invoke(1, 2);
+    }
+
+    public void TestMyDelegate()
+    {
+        //内置委托
+        //action-面对无返回值的类型；func-有返回值的类型; predicate-一个参数返回布尔类型
+        Action actionTest = () => Console.WriteLine("Hello World");
+        actionTest.Invoke();
+        Action<int, int> actionTest2 = (a, b) => Console.WriteLine($"{a}-{b}");//无返回值，有参数
+        actionTest2.Invoke(5, 6);
+        Func<int> funcTest = () => 10086;//func声明必须要有返回的类型，最后一个泛型就是返回的类型
+        funcTest.Invoke();
+        Func<int, int, int> funcTest2 = (a, b) => a + b;//最后一个泛型就是返回类型
+        funcTest2.Invoke(1, 2);
     }
 }
 ```

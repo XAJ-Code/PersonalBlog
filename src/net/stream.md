@@ -254,6 +254,16 @@ void EncryptFile(string inputFile, string outputFile, byte[] key, byte[] iv)
    FileStream fs = new FileStream("file.txt", FileMode.Open);
    // 操作流
    // 可能忘记调用 fs.Close()
+
+   public void TestStream()
+    {
+        var filePath = "./test.txt";
+        using FileStream fileStream = new FileStream(filePath, FileMode.OpenOrCreate,FileAccess.Read);
+        byte[] bytes = new byte[fileStream.Length];
+        fileStream.ReadExactly(bytes, 0, bytes.Length);//将文件读取到缓冲区byte[]
+        string str = Encoding.UTF8.GetString(bytes);
+        Console.WriteLine(str);
+    }
    ```
 
 2. **处理大文件时使用缓冲区**：
