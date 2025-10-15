@@ -189,6 +189,7 @@ export default defineConfig({
           items: [
             { text: "基本概念", link: "/src/camera/basicData" },
             { text: "ISP(图像信号处理器)", link: "/src/camera/ISP" },
+            { text: "图像分辨率和大小", link: "/src/camera/bmpImage" },
           ],
         },
       ]
