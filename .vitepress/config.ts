@@ -63,6 +63,7 @@ export default defineConfig({
             { text: "继承的多态性", link: "/src/net/polymorphism" },
             { text: "集合", link: "/src/net/collection" },
             { text: "I/0流", link: "/src/net/stream" },
+            { text: "p/invoke", link: "/src/net/pInvoke" },
           ],
         },
         {
