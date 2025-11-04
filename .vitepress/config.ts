@@ -191,6 +191,7 @@ export default defineConfig({
             { text: "ISP(图像信号处理器)", link: "/src/camera/ISP" },
             { text: "图像分辨率和大小", link: "/src/camera/bmpImage" },
             { text: "曝光时间", link: "/src/camera/exposure" },
+            { text: "光源控制器", link: "/src/camera/lightController" },
           ],
         },
       ]
