@@ -64,6 +64,7 @@ export default defineConfig({
             { text: "集合", link: "/src/net/collection" },
             { text: "I/0流", link: "/src/net/stream" },
             { text: "p/invoke", link: "/src/net/pInvoke" },
+            { text: "Socket通信", link: "/src/net/socket" },
           ],
         },
         {
